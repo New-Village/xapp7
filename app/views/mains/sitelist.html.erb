@@ -1,0 +1,11 @@
+<div class="main">
+  <h3>開発用コンソール</h3>
+  <%= form_for(@regSite) do |f|%>
+  <%= f.url_field :rs_url, placeholder: "URLを入力してください" %>
+  <%= f.submit "Post", class: "btn btn-xs btn-primary" %>
+  <% end %>
+
+  <% @sList.each do |f| %>
+  <%= link_to f.site.title, f.site.st_url, target: "_blank"%>,
+  <% end %>
+</div>

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'mains#index'
   
+  # 暫定的に実装中
+  get "mains/sitelist"
+  resources :sites, :only => [:create]
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -13,6 +13,7 @@ gem 'jquery-rails', '~>3.1'    # JqueryのRails版
 gem 'bootstrap-sass', '~> 3.2' # twitter bootstrap3 のsass版
 gem 'font-awesome-rails', '~> 4.2' # アイコンフォント
 gem 'masonry-rails', '~>0.2' # タイルのサイズに合わせた自動配置
+gem 'feedjira', '~> 1.3' # フィードの収集パース機能
 
 group :doc do
   gem 'sdoc', '~>0.4', require: false # bundle exec rake doc:rails generates the API under doc/api.
