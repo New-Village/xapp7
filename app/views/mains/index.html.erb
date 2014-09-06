@@ -1,11 +1,23 @@
 <div class="main">
   <article>
-    <ul class="alignleft tile1" id="1" onclick="read(1)"><li>aaa</li></ul>
-    <ul class="alignleft tile2" id="2" onclick="read(2)"><li>bbb</li></ul>
-    <ul class="alignleft tile1" id="3" onclick="read(3)"><li>ccc</li></ul>
-    <ul class="alignleft tile2" id="4" onclick="read(4)"><li>ddd</li></ul>
-    <ul class="alignleft tile2" id="5" onclick="read(5)"><li>eee</li></ul>
-    <ul class="alignleft tile3" id="6" onclick="read(6)"><li>fff</li></ul>
-    <ul class="alignleft tile1" id="7" onclick="read(7)"><li>ggg</li></ul>
+    <% @main.each do |f| %>
+    <!-- ログイン状態によってメニューを変化 -->
+    <% if f.id%3 == 0 then %>
+    <ul class="alignleft tile1" id="<%= f.id %>" onclick="read(<%= f.id %>)">
+      <li class="title"><%= link_to f.feed.title, f.feed.url, target: "_blank"%></li>
+      <li class="smry"><%= f.feed.smry %></li>
+    </ul>
+    <% elsif f.id%3 == 1 then%>
+    <ul class="alignleft tile3" id="<%= f.id %>" onclick="read(<%= f.id %>)">
+      <li class="title"><%= link_to f.feed.title, f.feed.url, target: "_blank"%></li>
+      <li class="smry"><%= f.feed.smry %></li>
+    </ul>
+    <% else %>
+    <ul class="alignleft tile2" id="<%= f.id %>" onclick="read(<%= f.id %>)">
+      <li class="title"><%= link_to f.feed.title, f.feed.url, target: "_blank"%></li>
+      <li class="smry"><%= f.feed.smry %></li>
+    </ul> 
+    <% end %>
+    <% end %>
   </article>
 </div>

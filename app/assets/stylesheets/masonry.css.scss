@@ -27,3 +27,19 @@ article > ul {
   height: 300px;
   background:#EBB056;
 }
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.smry {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}

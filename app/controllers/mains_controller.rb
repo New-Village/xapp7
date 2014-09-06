@@ -3,6 +3,7 @@ class MainsController < ApplicationController
   # GET /mains
   # GET /mains.json
   def index
+    @main = Main.unread  # 未読フィード取得
   end
 
   
