@@ -24,14 +24,15 @@ a.fa-bars {
 }
 
 // ページタイトル
-header > .navbar-brand {
-  font-size: 36px;
+header > .navbar-logo {
+  float: left;
+  font-size: 34px;
   font-weight: bold;
   color: white;
   text-transform: uppercase; 
   letter-spacing: -0.1em;
-  padding: 10px;
-  height: 30px;
+  margin-top: -5px;
+  margin-left: 15px;
   &:hover {
     color: white;
     text-decoration: none;
@@ -42,7 +43,8 @@ header > .navbar-brand {
 header > .btn {
   float: right;
   font-weight: bold;
-  margin: 4px;
+  margin: 3.5px;
+  margin-right: 10px;
   font-size: 14px;
     letter-spacing: -0.2em;
 }
