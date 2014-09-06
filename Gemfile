@@ -10,6 +10,7 @@ gem 'turbolinks' # Turbolinks makes following links in your web application fast
 gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease.
 
 gem 'bootstrap-sass', '~> 3.2' # twitter bootstrap3 のsass版
+gem 'font-awesome-rails', '~> 4.2' # アイコンフォント
 
 group :doc do
   gem 'sdoc', '~>0.4', require: false # bundle exec rake doc:rails generates the API under doc/api.
