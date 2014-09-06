@@ -11,9 +11,10 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
-# Ignore all logfiles and tempfiles.
+# Ignore all logfiles, tempfiles and bundlefiles.
 /log/*.log
 /tmp
+/vendor/bundle
 
 # Ignore other unneeded files.
 doc/
@@ -24,4 +25,3 @@ doc/
 .idea
 .secret
 /*.lock
-/vendor/bundle
