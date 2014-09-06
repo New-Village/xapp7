@@ -2,6 +2,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* Universal */
+html, body { height: 100%; }
+
+body { 
+  margin-top: 40px;
+  background: #e0e0e0;
+}
+
+
 /* NavBar */
 header {
   background-color: #30bd61;
@@ -32,7 +41,7 @@ header > .navbar-logo {
   text-transform: uppercase; 
   letter-spacing: -0.1em;
   margin-top: -5px;
-  margin-left: 15px;
+  margin-left: 10px;
   &:hover {
     color: white;
     text-decoration: none;
@@ -46,6 +55,10 @@ header > .btn {
   margin: 3.5px;
   margin-right: 10px;
   font-size: 14px;
-    letter-spacing: -0.2em;
+  letter-spacing: -0.2em;
 }
+
+/* メイン画面 */
+
+
 
