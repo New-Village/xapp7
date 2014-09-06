@@ -3,7 +3,7 @@ namespace :db do
   task getfeed: :environment do
 
     Site.find_each do |site|
-      @fjr = Feedjira::Feed.fetch_and_parse site.rss_url
+      @fjr = Feedjira::Feed.fetch_and_parse site.rs_url
       for num in 0..9 do
         @feed = @fjr.entries[num.to_i]
         unless @feed.nil? then
@@ -13,21 +13,24 @@ namespace :db do
           @regFed.publish_at = @feed.published
           @regFed.site_id = site.id
           unless @feed.summary.nil? then
-            @regFed.summary = @feed.summary
+            @regFed.smry = @feed.summary
+          end
+          unless @feed.content.nil? then
+            @regFed.smry = @feed.content
           end
           @regFed.save
 
         end  # unless @feed.nil? end
       end # for end
           
-          Sbsc.where(:site_id => site.id).find_each do |sbsc|
+ #         Sbsc.where(:site_id => site.id).find_each do |sbsc|
             Feed.where(:site_id => site.id).find_each do |feed|
-              Main.create(user_id: sbsc.user_id,
+              Main.create(user_id: 1,
                 feed_id: feed.id,
                 read_flg: "f"
                 )
             end
-          end          
+#          end          
     end # site.each end
 
         
