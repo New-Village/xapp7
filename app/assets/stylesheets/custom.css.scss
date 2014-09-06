@@ -1,0 +1,49 @@
+/* Boostrapのカスタマイズ専用 */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* NavBar */
+header {
+  background-color: #30bd61;
+}
+
+.navbar {
+  min-height: 40px !important;
+  height: 40px;
+}
+
+// Menu Font
+a.fa-bars {
+  float: left;
+  color: #048931;
+  font-size: 34px;
+  padding: 3px 10px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// ページタイトル
+header > .navbar-brand {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase; 
+  letter-spacing: -0.1em;
+  padding: 10px;
+  height: 30px;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+// ログインボタン
+header > .btn {
+  float: right;
+  font-weight: bold;
+  margin: 4px;
+  font-size: 14px;
+    letter-spacing: -0.2em;
+}
+

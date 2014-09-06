@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.0.0' # Use CoffeeScript for .js.coffee assets and view
 gem 'turbolinks' # Turbolinks makes following links in your web application faster.
 gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease.
 
+gem 'jquery-rails', '~>3.1'    # JqueryのRails版
 gem 'bootstrap-sass', '~> 3.2' # twitter bootstrap3 のsass版
 gem 'font-awesome-rails', '~> 4.2' # アイコンフォント
 
