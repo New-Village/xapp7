@@ -14,5 +14,4 @@ function controller_show(fid){
     data: {format : fid},
     dataType: "html"
   })
-  alert(fid);
 }
