@@ -3,7 +3,7 @@
     <% @mains.each do |f| %>
     <% @tile = f.id%3 +1 %>
     <ul class="alignleft <%= 'tile'+@tile.to_s %>" id="<%= f.id %>" onclick="read(<%= f.id %>)">
-      <li class="title"><%= link_to f.feed.title, main_path(f.feed.id), target: "_blank"%></li>
+      <li class="title"><%= link_to f.feed.title, main_path(f.id), target: "_blank"%></li>
       <li class="smry"><%= f.feed.smry %></li>
     </ul>
     <% end %>

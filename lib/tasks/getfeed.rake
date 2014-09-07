@@ -23,14 +23,14 @@ namespace :db do
         end  # unless @feed.nil? end
       end # for end
           
- #         Sbsc.where(:site_id => site.id).find_each do |sbsc|
+         Sbsc.where(:site_id => site.id).find_each do |sbsc|
             Feed.where(:site_id => site.id).find_each do |feed|
               Main.create(user_id: 1,
                 feed_id: feed.id,
                 read_flg: "f"
                 )
             end
-#          end          
+          end          
     end # site.each end
 
         

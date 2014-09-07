@@ -1,15 +1,15 @@
 class MainsController < ApplicationController
+  before_filter :authenticate_user!  #ログインしているかどうか確認
   before_action :set_main, only: [:show, :update]
   
   # GET /mains
   # GET /mains.json
   def index
-    @mains = Main.unread  # 未読フィード取得
+    @mains = Main.own(current_user.id).unread  # 未読フィード取得
   end
 
-  # 既読フラグを更新して、フィードに遷移
+  # フィードのURLに遷移
   def show
-    update
     redirect_to @main.feed.url
   end
 
@@ -18,15 +18,16 @@ class MainsController < ApplicationController
     @main.update_attribute(:read_flg,"t")
   end
   
+  # 現在、開発向けに実装。サイト登録とサイトリストの取得
   def menu
     @regSite = Site.new # TEMP Site Registration
-    @sList = Sbsc.all # Site List 購読中のサイト一覧
+    @sList = Sbsc.own(current_user.id) # Site List 購読中のサイト一覧
   end
  
   private
     # パラメータを取得してインスタンス変数（@main）を作成
     def set_main
-      @main = Main.find_by(:feed_id => params[:format])
+      @main = Main.find_by(:id => params[:format])
     end
   
 end
