@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   root 'mains#index'
+  resource :main, :only => [:show, :update]
+
   
   # 暫定的に実装中
-  get "mains/sitelist"
+  get "mains/menu"
   resources :sites, :only => [:create]
   
   # The priority is based upon order of creation: first created -> highest priority.
