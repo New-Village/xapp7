@@ -1,7 +1,3 @@
 language: ruby
 rvm:
   - 2.1.2
-
-# bundle install をキャッシュ
-# see: http://bekkou68.hatenablog.com/entry/2014/04/02/210754
-cache: bundler
