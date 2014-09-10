@@ -2,7 +2,7 @@ class CreateFeeds < ActiveRecord::Migration
   def change
     create_table :feeds do |t|
       t.string :title
-      t.string :url
+      t.text :url
       t.text :smry
       t.datetime :publish_at
       t.integer :site_id
