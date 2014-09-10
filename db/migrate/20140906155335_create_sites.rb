@@ -3,7 +3,7 @@ class CreateSites < ActiveRecord::Migration
     create_table :sites do |t|
       t.string :title
       t.string :st_url
-      t.string :rs_url
+      t.text :rs_url
       t.datetime :last_publish_at
 
       t.timestamps

@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20140907113735) do
   create_table "sites", force: true do |t|
     t.string   "title"
     t.string   "st_url"
-    t.string   "rs_url"
+    t.text     "rs_url"
     t.datetime "last_publish_at"
     t.datetime "created_at"
     t.datetime "updated_at"
