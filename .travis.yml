@@ -1,3 +1,9 @@
 language: ruby
 rvm:
   - 2.1.2
+
+deploy:
+  provider: heroku
+  app: xapp7 # optional if it's the same as your repo name
+  api_key: "YOUR API TOKEN"
+  

@@ -2,19 +2,19 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 # Base
-gem 'rails', '4.1.5' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'sass-rails', '~> 4.0.3' # Use SCSS for stylesheets
+gem 'rails', '~> 4.1' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'sass-rails', '~> 4.0' # Use SCSS for stylesheets
 gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
-gem 'coffee-rails', '~> 4.0.0' # Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.1' # Use CoffeeScript for .js.coffee assets and views
 gem 'turbolinks' # Turbolinks makes following links in your web application faster.
-gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease.
+gem 'jbuilder', '~> 2.2' # Build JSON APIs with ease.
 
 gem 'jquery-rails', '~>3.1'    # JqueryのRails版
-gem 'bootstrap-sass', '~> 3.2' # twitter bootstrap3 のsass版
+gem 'bootstrap-sass', '~> 3.3' # twitter bootstrap3 のsass版
 gem 'font-awesome-rails', '~> 4.2' # アイコンフォント
 gem 'masonry-rails', '~>0.2' # タイルのサイズに合わせた自動配置
-gem 'feedjira', '~> 1.3' # フィードの収集パース機能
-gem 'devise', '~>3.2'    # 認証機能
+gem 'feedjira', '~> 1.5' # フィードの収集パース機能
+gem 'devise', '~>3.4'    # 認証機能
 
 group :doc do
   gem 'sdoc', '~>0.4', require: false # bundle exec rake doc:rails generates the API under doc/api.
@@ -22,7 +22,7 @@ end
 
 group :production do
   gem 'pg', '~>0.15' # database - Postgres
-  gem 'rails_12factor', '~>0.0.2' # HerokuでRails4を動かす
+  gem 'rails_12factor', '~>0.0.3' # HerokuでRails4を動かす
 end
 
 group :development, :test do
